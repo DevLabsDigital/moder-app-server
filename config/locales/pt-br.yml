@@ -14,7 +14,7 @@ pt-BR:
   completed: CONCLUIDO
   canceled: CANCELADO
   on_way: A CAMINHO
-  pendent: PENDENTE
+  pending: PENDENTE
 
   activerecord:
     errors:
