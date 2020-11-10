@@ -7,12 +7,12 @@
     %table.bordered
       %thead
         %tr
-          %th Destination accountable
-          %th Destination address
-          %th Destination phone
-          %th Note
-          %th Company
-          %th Deliveryman
+          %th= Order.human_attribute_name(:destination_accountable)
+          %th= Order.human_attribute_name(:destination_address)
+          %th= Order.human_attribute_name(:destination_phone)
+          %th= Order.human_attribute_name(:note)
+          %th= Order.human_attribute_name(:company)
+          %th= Order.human_attribute_name(:deliveryman)
           %th
           %th Status
 

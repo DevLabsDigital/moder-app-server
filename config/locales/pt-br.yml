@@ -20,10 +20,19 @@ pt-BR:
     models:
       company: Empresa
       user: Usuário
+      order: Pedido
       deliveryman: 
         one: Entregador
         other: Entregadores
     attributes:
+      order:
+        destination_accountable: Responsável por receber
+        destination_address: Endereço de entrega
+        destination_phone: Telefone do destinatário
+        note: Observações
+        state: Estado
+        company: Empresa
+        deliveryman: Entregador
       deliveryman:
         address: Endereço
         birthday: Data de nascimento

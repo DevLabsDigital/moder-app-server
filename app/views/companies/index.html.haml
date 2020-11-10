@@ -6,15 +6,15 @@
     %table.bordered
       %thead
         %tr
-          %th Accountable
-          %th Address
-          %th City
-          %th Cpf cnpj
-          %th Email
-          %th Name
-          %th Neighborhood
-          %th Phone
-          %th State
+          %th= Company.human_attribute_name(:accountable)
+          %th= Company.human_attribute_name(:address)
+          %th= Company.human_attribute_name(:city)
+          %th= Company.human_attribute_name(:cpf_cnpj)
+          %th= Company.human_attribute_name(:email)
+          %th= Company.human_attribute_name(:name)
+          %th= Company.human_attribute_name(:neighborhood)
+          %th= Company.human_attribute_name(:phone)
+          %th= Company.human_attribute_name(:state)
           %th
           %th
           %th
