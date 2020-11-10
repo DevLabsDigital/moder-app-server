@@ -67,11 +67,7 @@
     "@babel/core": "7.4.5"
   },
   "scripts": {
-    "postinstall": "npm rebuild node-sass",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "postinstall": "npm rebuild node-sass"
   },
   "engines": {
     "node": "11.10.1"
