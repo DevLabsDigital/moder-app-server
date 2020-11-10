@@ -28,7 +28,7 @@
             %td= react_component 'EditOrder', {order: order, possible_states: order.possible_states}
             %td
               %label{class: "#{order.state}-state"}
-                = I18.t(order.state)
+                = I18n.t(order.state)
 
     %br
 
