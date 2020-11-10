@@ -17,8 +17,59 @@ pt-BR:
   pending: PENDENTE
 
   activerecord:
+    models:
+      company: Empresa
+      user: Usuário
+      deliveryman: 
+        one: Entregador
+        other: Entregadores
+    attributes:
+      deliveryman:
+        address: Endereço
+        birthday: Data de nascimento
+        city: Cidade
+        cpf_cnpj: CPF/CNPJ
+        email: email
+        name: Nome
+        neighborhood: Bairro
+        phone: Telefone
+        rg: RG
+        uf: UF
+        vehicle_color: Cor do veículo
+        vehicle_license_plate: Placa do veículo
+        vehicle_model: Modelo do veículo
+        vehicle_year: Ano do veículo
+      profile:
+        phone: Telefone
+      user:
+        name: Nome
+        phone: Telefone
+        password: Senha
+        password_confirmation: Confirmação de Senha
+      company:
+        category: Categoria
+        contact: Contato
+        cost_center_file: Possui arquivo de centro de custos
+        phone: Telefone
+        razao_social: Razão social
+        pattern_to_clone: Padrão
+        segment: Segmento
+        plan: Plano
+        balance_sheet_upload_enabled: Upload de balancete habilitado
+        cost_center_upload_enabled: Upload de centro de custo habilitado
+        accountable: Responsável
+        address: Endereço
+        city: Cidade
+        cpf_cnpj: CPF/CNPJ
+        email: E-mail
+        name: Nome
+        neighborhood: Bairro
+        phone: Telefone
+        state: UF
+
     errors:
       messages:
+
         record_invalid: 'A validação falhou: %{errors}'
         restrict_dependent_destroy:
           has_one: Não é possível excluir o registro pois existe um %{record} dependente
