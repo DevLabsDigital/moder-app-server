@@ -1,0 +1,34 @@
+.table-header
+  %h1 Pedidos
+  - if current_user.company?
+    = link_to 'Adicionar novo', new_order_path, class: 'btn add right'
+.flex.margin-top-20
+  .bg-content.width-100
+    %table.bordered
+      %thead
+        %tr
+          %th Destination accountable
+          %th Destination address
+          %th Destination phone
+          %th Note
+          %th Company
+          %th Deliveryman
+          %th
+          %th Status
+
+      %tbody
+        - @orders.each do |order|
+          %tr
+            %td= order.destination_accountable
+            %td= order.destination_address
+            %td= order.destination_phone
+            %td= order.note
+            %td= order.company
+            %td= order.deliveryman
+            %td= react_component 'EditOrder', {order: order, possible_states: order.possible_states}
+            %td
+              %label{class: "#{order.state}-state"}
+                = I18.t(order.state)
+
+    %br
+

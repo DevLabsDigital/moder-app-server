@@ -1,0 +1,50 @@
+.table-header
+  %h1 Entregadores
+  = link_to 'Adicionar novo', new_deliveryman_path, class: 'btn add right'
+.flex.margin-top-20
+  .bg-content.width-100
+    %table.bordered
+      %thead
+        %tr
+          %th Address
+          %th Birthday
+          %th City
+          %th Cpf cnpj
+          %th Email
+          %th Name
+          %th Neighborhood
+          %th Phone
+          %th Rg
+          %th Uf
+          %th Vehicle color
+          %th Vehicle license plate
+          %th Vehicle model
+          %th Vehicle year
+          %th
+          %th
+          %th
+
+      %tbody
+        - @deliverymen.each do |deliveryman|
+          %tr
+            %td= deliveryman.address
+            %td= deliveryman.birthday
+            %td= deliveryman.city
+            %td= deliveryman.cpf_cnpj
+            %td= deliveryman.email
+            %td= deliveryman.name
+            %td= deliveryman.neighborhood
+            %td= deliveryman.phone
+            %td= deliveryman.rg
+            %td= deliveryman.uf
+            %td= deliveryman.vehicle_color
+            %td= deliveryman.vehicle_license_plate
+            %td= deliveryman.vehicle_model
+            %td= deliveryman.vehicle_year
+            %td= link_to 'Show', deliveryman
+            %td= link_to 'Edit', edit_deliveryman_path(deliveryman)
+            %td= link_to 'Destroy', deliveryman, method: :delete, data: { confirm: 'Are you sure?' }
+
+    %br
+
+

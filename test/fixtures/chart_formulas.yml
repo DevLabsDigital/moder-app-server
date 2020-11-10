@@ -1,0 +1,35 @@
+# == Schema Information
+#
+# Table name: chart_formulas
+#
+#  id         :bigint           not null, primary key
+#  is_total   :boolean
+#  label      :string
+#  pattern    :string
+#  position   :integer
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  chart_id   :bigint
+#
+# Indexes
+#
+#  index_chart_formulas_on_chart_id  (chart_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (chart_id => charts.id)
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  chart: one
+  label: MyString
+  pattern: MyString
+  position: 1
+
+two:
+  chart: two
+  label: MyString
+  pattern: MyString
+  position: 1

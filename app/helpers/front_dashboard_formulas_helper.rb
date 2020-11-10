@@ -1,0 +1,2 @@
+module FrontDashboardFormulasHelper
+end

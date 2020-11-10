@@ -1,0 +1,10 @@
+.bg-content
+	= simple_form_for @user do |f|
+		= f.input :user_scope, collection: User.user_scopes.map{|key, value| [I18n.t(key), key]}
+		= f.simple_fields_for :profile do |p|
+			=# = p.association :company
+			=# = p.association :role
+			= p.input :name
+		= f.input :email
+		
+		= f.button :submit

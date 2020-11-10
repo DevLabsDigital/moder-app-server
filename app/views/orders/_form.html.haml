@@ -1,0 +1,19 @@
+-# frozen_string_literal: true
+.width-100.balance_sheets
+  .flex
+    .bg-content
+      = simple_form_for(@order) do |f|
+        = f.error_notification
+        = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
+
+        .form-inputs
+          = f.input :destination_accountable
+          = f.input :destination_address
+          = f.input :destination_phone
+          = f.input :note
+          -if current_user.admin?
+            = f.association :company
+            = f.association :deliveryman
+
+        .form-actions
+          = f.button :submit

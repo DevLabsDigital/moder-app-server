@@ -1,0 +1,25 @@
+.width-100.balance_sheets
+  .flex
+    .bg-content
+      = simple_form_for(@deliveryman) do |f|
+        = f.error_notification
+        = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
+
+        .form-inputs
+          = f.input :address
+          = f.input :birthday
+          = f.input :city
+          = f.input :cpf_cnpj
+          = f.input :email
+          = f.input :name
+          = f.input :neighborhood
+          = f.input :phone
+          = f.input :rg
+          = f.input :uf
+          = f.input :vehicle_color
+          = f.input :vehicle_license_plate
+          = f.input :vehicle_model
+          = f.input :vehicle_year
+
+        .form-actions
+          = f.button :submit

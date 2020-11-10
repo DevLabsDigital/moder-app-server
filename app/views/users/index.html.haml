@@ -1,0 +1,33 @@
+
+.table-header
+  %h1 Lista de usuários
+  = link_to 'Adicionar novo', new_user_path, class: 'btn add right'
+.flex
+  .bg-content.width-100.margin-top-20
+    %table
+      %thead
+        %tr
+          %th Nome
+          %th Perfil
+          %th Email
+          %th Empresa
+          %th Status
+          %th{colspan: 2} Ações
+          
+
+      %tbody
+        - @users.each do |user|
+          %tr
+            %td=  user.name
+            %td=  user.user_scope
+            %td=  user.email
+            %td=  user.company
+            %td 
+              .btn.active ativo
+            %td= link_to 'editar', edit_user_path(user), class: 'btn edit'
+            %td= link_to 'suspender', user, class: 'btn suspend'
+    %hr
+    = will_paginate @users
+    %br
+
+    

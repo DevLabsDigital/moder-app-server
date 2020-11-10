@@ -1,0 +1,22 @@
+.bg-content.login
+
+	.left
+		.img
+			= image_tag 'onboarding-icon.png'
+		%h1 BEM VINDO AO SAGA
+		%p Praesent ut felis pharetra, tempus velit non, lobortis tellus. Proin ut accumsan urna. 
+	.right
+		.inner
+			.title
+				Conclua seu cadastro para começar a utilizar a plataforma.
+			.subtitle
+				DEFINA SEUS DADOS DE ACESSO
+			= simple_form_for @user, url: finalize_save_path(params[:verification_code]) do |f|
+				= f.simple_fields_for :profile do |p|
+					= p.input :name
+					= p.input :cpf
+					= p.input :phone
+				.actions
+					= link_to "Forgot your password?", new_password_path(:user)
+					%button Concluir
+				

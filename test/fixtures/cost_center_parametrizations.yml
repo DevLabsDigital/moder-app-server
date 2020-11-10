@@ -1,0 +1,28 @@
+# == Schema Information
+#
+# Table name: cost_center_parametrizations
+#
+#  id                     :bigint           not null, primary key
+#  cost_center_code       :string
+#  labor_cost_is_fixed    :boolean
+#  ordinary_cost_is_fixed :boolean
+#  created_at             :datetime         not null
+#  updated_at             :datetime         not null
+#  company_id             :bigint
+#  cost_center_area_id    :bigint
+#
+# Indexes
+#
+#  index_cost_center_parametrizations_on_company_id           (company_id)
+#  index_cost_center_parametrizations_on_cost_center_area_id  (cost_center_area_id)
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cost_center_code: MyString
+  balance_sheet_code: MyString
+
+two:
+  cost_center_code: MyString
+  balance_sheet_code: MyString

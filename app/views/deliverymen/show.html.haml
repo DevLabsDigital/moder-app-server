@@ -1,0 +1,48 @@
+%p#notice= notice
+
+%p
+  %b Address:
+  = @deliveryman.address
+%p
+  %b Birthday:
+  = @deliveryman.birthday
+%p
+  %b City:
+  = @deliveryman.city
+%p
+  %b Cpf cnpj:
+  = @deliveryman.cpf_cnpj
+%p
+  %b Email:
+  = @deliveryman.email
+%p
+  %b Name:
+  = @deliveryman.name
+%p
+  %b Neighborhood:
+  = @deliveryman.neighborhood
+%p
+  %b Phone:
+  = @deliveryman.phone
+%p
+  %b Rg:
+  = @deliveryman.rg
+%p
+  %b Uf:
+  = @deliveryman.uf
+%p
+  %b Vehicle color:
+  = @deliveryman.vehicle_color
+%p
+  %b Vehicle license plate:
+  = @deliveryman.vehicle_license_plate
+%p
+  %b Vehicle model:
+  = @deliveryman.vehicle_model
+%p
+  %b Vehicle year:
+  = @deliveryman.vehicle_year
+
+= link_to 'Edit', edit_deliveryman_path(@deliveryman)
+\|
+= link_to 'Back', deliverymen_path

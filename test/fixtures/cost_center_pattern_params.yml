@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cost_center_pattern: one
+  label: MyString
+  parent_id: 
+  position: MyString
+  key: 
+  operation: MyString
+  fixed: false
+  head: MyString
+  tree_label_fixed: MyString
+  childreen_label_fixed: MyString
+  is_tail: false
+
+two:
+  cost_center_pattern: two
+  label: MyString
+  parent_id: 
+  position: MyString
+  key: 
+  operation: MyString
+  fixed: false
+  head: MyString
+  tree_label_fixed: MyString
+  childreen_label_fixed: MyString
+  is_tail: false

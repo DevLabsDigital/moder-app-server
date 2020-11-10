@@ -1,0 +1,40 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:name => "viewport", "content" => "width=device-width, initial-scale=0.6"}/
+    :css
+      -webkit-text-size-adjust:none;
+      -ms-text-size-adjust:none;
+      -moz-text-size-adjust:none;
+      text-size-adjust:none;
+    %title Moder Delivery
+    = csrf_meta_tags
+    = csp_meta_tag
+
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    %script{:src => "https://unpkg.com/axios/dist/axios.min.js"}
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application'
+    %script{:src => "https://code.highcharts.com/highcharts.js"}
+    %script{:src => "https://code.highcharts.com/highcharts-more.js"}
+
+    
+
+    %link{:href => "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap", :rel => "stylesheet"}/
+    
+    
+  %body
+    - flash.each do |key, value|
+      %div{class: "alert alert-#{key}"}
+        %a{class: "close", href: "#", data: {dismiss:"alert"}} ×
+        %ul
+          %li
+            = value.to_s.html_safe
+    
+    = react_component('Header')
+    .wrapper
+      .lateral-menu
+        = react_component('LateralMenu', userRole: current_user.role)
+      .center
+        = yield

@@ -1,0 +1,39 @@
+.table-header
+  %h1 Entregadores
+  = link_to 'Adicionar novo', new_company_path, class: 'btn add right'
+.flex.margin-top-20
+  .bg-content.width-100
+    %table.bordered
+      %thead
+        %tr
+          %th Accountable
+          %th Address
+          %th City
+          %th Cpf cnpj
+          %th Email
+          %th Name
+          %th Neighborhood
+          %th Phone
+          %th State
+          %th
+          %th
+          %th
+
+      %tbody
+        - @companies.each do |company|
+          %tr
+            %td= company.accountable
+            %td= company.address
+            %td= company.city
+            %td= company.cpf_cnpj
+            %td= company.email
+            %td= company.name
+            %td= company.neighborhood
+            %td= company.phone
+            %td= company.state
+            %td= link_to 'Show', company
+            %td= link_to 'Edit', edit_company_path(company)
+            %td= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' }
+
+    %br
+

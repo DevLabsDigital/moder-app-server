@@ -1,0 +1,21 @@
+{
+  "application.js": "/packs/js/application-63b811d1dd3797079bf6.js",
+  "application.js.map": "/packs/js/application-63b811d1dd3797079bf6.js.map",
+  "entrypoints": {
+    "application": {
+      "js": [
+        "/packs/js/application-63b811d1dd3797079bf6.js"
+      ],
+      "js.map": [
+        "/packs/js/application-63b811d1dd3797079bf6.js.map"
+      ]
+    }
+  },
+  "media/images/Framebike.svg": "/packs/media/images/Framebike-a38fe36b.svg",
+  "media/images/Framecompany.svg": "/packs/media/images/Framecompany-cf5e9026.svg",
+  "media/images/Framedashboard.svg": "/packs/media/images/Framedashboard-2206f270.svg",
+  "media/images/Frameorder.svg": "/packs/media/images/Frameorder-c343aa59.svg",
+  "media/images/logo.png": "/packs/media/images/logo-d86313dc.png",
+  "media/images/menu-expand-icon.png": "/packs/media/images/menu-expand-icon-6a30c4cc.png",
+  "media/images/menu-retract-icon.png": "/packs/media/images/menu-retract-icon-3e5a4896.png"
+}

@@ -1,0 +1,33 @@
+%p#notice= notice
+
+%p
+  %b Accountable:
+  = @company.accountable
+%p
+  %b Address:
+  = @company.address
+%p
+  %b City:
+  = @company.city
+%p
+  %b Cpf cnpj:
+  = @company.cpf_cnpj
+%p
+  %b Email:
+  = @company.email
+%p
+  %b Name:
+  = @company.name
+%p
+  %b Neighborhood:
+  = @company.neighborhood
+%p
+  %b Phone:
+  = @company.phone
+%p
+  %b State:
+  = @company.state
+
+= link_to 'Edit', edit_company_path(@company)
+\|
+= link_to 'Back', companies_path

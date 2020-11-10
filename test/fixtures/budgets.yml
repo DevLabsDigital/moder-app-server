@@ -1,0 +1,39 @@
+# == Schema Information
+#
+# Table name: budgets
+#
+#  id              :bigint           not null, primary key
+#  archive         :string
+#  estimate        :float
+#  month           :integer
+#  reference_model :string
+#  year            :integer
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  company_id      :bigint
+#  reference_id    :string
+#
+# Indexes
+#
+#  index_budgets_on_company_id  (company_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (company_id => companies.id)
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  year: 1
+  month: 1
+  estimate: 1.5
+  reference_model: MyString
+  reference_id: MyString
+
+two:
+  year: 1
+  month: 1
+  estimate: 1.5
+  reference_model: MyString
+  reference_id: MyString

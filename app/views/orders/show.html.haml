@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Destination accountable:
+  = @order.destination_accountable
+%p
+  %b Destination address:
+  = @order.destination_address
+%p
+  %b Destination phone:
+  = @order.destination_phone
+%p
+  %b Note:
+  = @order.note
+%p
+  %b Company:
+  = @order.company_id
+%p
+  %b Deliveryman:
+  = @order.deliveryman_id
+
+= link_to 'Edit', edit_order_path(@order)
+\|
+= link_to 'Back', orders_path
