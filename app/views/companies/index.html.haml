@@ -31,9 +31,8 @@
             %td= company.neighborhood
             %td= company.phone
             %td= company.state
-            %td= link_to 'Show', company
-            %td= link_to 'Edit', edit_company_path(company)
-            %td= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' }
+            %td= link_to 'Editar', edit_company_path(company)
+            %td= link_to 'Deletar', company, method: :delete, data: { confirm: 'Você tem certeza?' }
 
     %br
 

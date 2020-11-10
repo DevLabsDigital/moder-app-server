@@ -41,9 +41,8 @@
             %td= deliveryman.vehicle_license_plate
             %td= deliveryman.vehicle_model
             %td= deliveryman.vehicle_year
-            %td= link_to 'Show', deliveryman
-            %td= link_to 'Edit', edit_deliveryman_path(deliveryman)
-            %td= link_to 'Destroy', deliveryman, method: :delete, data: { confirm: 'Are you sure?' }
+            %td= link_to 'Editar', edit_deliveryman_path(deliveryman)
+            %td= link_to 'Deletar', deliveryman, method: :delete, data: { confirm: 'Você tem certeza?' }
 
     %br
 
