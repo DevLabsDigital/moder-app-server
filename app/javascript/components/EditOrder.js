@@ -40,7 +40,7 @@ class EditOrder extends React.Component {
     
     return (
       <div>
-        <i className={'fa fa-eye'} onClick={()=> this.handleClickOpen()}></i>
+        <i className={'fa fa-eye'} style={{cursor: 'pointer'}} onClick={()=> this.handleClickOpen()}></i>
         <ChangeStateModal {...this.props}  open={this.state.opened} onClose={this.handleClose.bind(this)} />
       </div>
     );

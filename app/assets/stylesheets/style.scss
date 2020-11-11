@@ -579,13 +579,15 @@ button.add{
     height: auto;
     display: flex;
     align-items: center;
-    background-image: url(/assets/btn-add-icn);
+    background-image: url(/assets/btn-add-icn.png);
     background-repeat: no-repeat;
     padding-left: 64px;
     background-position: 31px center;
     height: 22px;
     min-width: 88px;
-
+    &:hover{
+    	color: whitesmoke;
+    }
     i{
     	font-size: 20px;
     	margin-right: 10px;

@@ -36,7 +36,7 @@ class DeliverymenController < ApplicationController
 
     respond_to do |format|
       if @deliveryman.save
-        format.html { redirect_to @deliveryman, notice: 'Deliveryman was successfully created.' }
+        format.html { redirect_to deliverymen_path, notice: 'Entregador criado com sucesso' }
         format.json { render :show, status: :created, location: @deliveryman }
       else
         format.html { render :new }
