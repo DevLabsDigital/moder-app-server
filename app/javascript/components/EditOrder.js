@@ -28,7 +28,7 @@ class EditOrder extends React.Component {
           state  
         }
       })  
-      location.reload();
+      // location.reload();
     }
     
     

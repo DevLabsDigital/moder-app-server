@@ -20,18 +20,20 @@ import TextField from '@material-ui/core/TextField';
  
 export default class ChangeStateModal extends React.Component {
   state = {
-    deliverymen: [],
-    deliverymanId: this.props.deliverymanId
+    deliverymanId: this.props.deliverymanId,
+    deliverymen: this.props.deliverymen
   }
   handleClose(state=null){
     const { onClose, selectedValue, open, balanceSheet } = this.props;
     const { deliverymanId } = this.state;
+    
     onClose(deliverymanId, state);
 
   };
 
-  setInputValue(inputValue){
-    console.log(inputValue)
+  setInputValue(deliverymanId){
+    
+    this.setState({deliverymanId})
   }
 
   setDeliverymanId(id){
@@ -42,20 +44,15 @@ export default class ChangeStateModal extends React.Component {
     console.log(id)
   }
   
-  async fetchDeliveryMen() {
-    
-    let result = await axios.get(`/deliverymen.json`);
-    this.setState({deliverymen: result.data })  
-    
-  }
+
 
   canEditDeliveryMen(){
     return true
   }
 
-  componentDidMount(){
-    this.fetchDeliveryMen()
-  }
+  
+
+  
 
   render(){
     const { onClose, selectedValue, open, balanceSheet, possible_states, order } = this.props;
@@ -69,9 +66,9 @@ export default class ChangeStateModal extends React.Component {
             options={this.state.deliverymen}
             disabled={!this.canEditDeliveryMen()}
             getOptionLabel={(option) => option.name}
-            getOptionSelected={(option)=> this.setDeliverymanId(option.id)}
-            onInputChange={(event, newInputValue) => {
-              this.setInputValue(newInputValue);
+            getOptionSelected={(option)=> option.id}
+            onChange={(event, newValue) => {
+              this.setInputValue(newValue.id)
             }}
             style={{ width: 300 }}
             renderInput={(params) => <TextField {...params} label="Entregador" variant="outlined" />}

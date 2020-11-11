@@ -1,5 +1,6 @@
 .table-header
   %h1 Pedidos
+  = link_to fa_icon('refresh'), orders_path, class: 'btn refresh right'
   - if current_user.company?
     = link_to 'Adicionar novo', new_order_path, class: 'btn add right'
 .flex.margin-top-20
@@ -25,7 +26,7 @@
             %td= order.note
             %td= order.company
             %td= order.deliveryman
-            %td= react_component 'EditOrder', {order: order, possible_states: order.possible_states}
+            %td= react_component 'EditOrder', {order: order, possible_states: order.possible_states, deliverymen: @deliverymen}
             %td
               %label{class: "#{order.state}-state"}
                 = I18n.t(order.state)

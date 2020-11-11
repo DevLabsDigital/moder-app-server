@@ -1,3 +1,9 @@
+a.btn.refresh.right {
+    font-size: 23px;
+    padding: 7px;
+    display: flex;
+    align-items: center;
+}
 .pending-state,
 .on_way-state,
 .completed-state,
@@ -579,7 +585,7 @@ button.add{
     height: auto;
     display: flex;
     align-items: center;
-    background-image: url(/assets/btn-add-icn.png);
+    background-image: asset-url('btn-add-icn.png');
     background-repeat: no-repeat;
     padding-left: 64px;
     background-position: 31px center;

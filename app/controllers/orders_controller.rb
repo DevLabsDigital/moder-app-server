@@ -10,7 +10,7 @@ class OrdersController < ApplicationController
     elsif current_user.admin?
       @orders = Order.all  
     end
-    
+    @deliverymen = Deliveryman.order(:name)
   end
 
   # GET /orders/1
