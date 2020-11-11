@@ -26,7 +26,8 @@
             %td= order.note
             %td= order.company
             %td= order.deliveryman
-            %td= react_component 'EditOrder', {order: order, possible_states: order.possible_states, deliverymen: @deliverymen}
+            -if current_user.admin?
+              %td= react_component 'EditOrder', {order: order, possible_states: order.possible_states, deliverymen: @deliverymen}
             %td
               %label{class: "#{order.state}-state"}
                 = I18n.t(order.state)
