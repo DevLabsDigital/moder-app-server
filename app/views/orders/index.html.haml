@@ -14,7 +14,8 @@
           %th= Order.human_attribute_name(:note)
           %th= Order.human_attribute_name(:company)
           %th= Order.human_attribute_name(:deliveryman)
-          %th
+          -if current_user.admin?
+            %th
           %th Status
 
       %tbody
