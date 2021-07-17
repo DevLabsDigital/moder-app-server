@@ -23,6 +23,8 @@ class Profile < ApplicationRecord
   belongs_to :user
   belongs_to :company
   belongs_to :role
+  has_one :address
   has_many :consultings
 
+  accepts_nested_attributes_for :address
 end

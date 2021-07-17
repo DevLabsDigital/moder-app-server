@@ -10,10 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_29_142608) do
+ActiveRecord::Schema.define(version: 2021_06_21_001842) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "addresses", force: :cascade do |t|
+    t.bigint "profile_id"
+    t.string "cep"
+    t.string "address"
+    t.string "district"
+    t.string "state"
+    t.string "city"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["profile_id"], name: "index_addresses_on_profile_id"
+  end
 
   create_table "companies", force: :cascade do |t|
     t.string "name"
@@ -46,6 +58,9 @@ ActiveRecord::Schema.define(version: 2020_10_29_142608) do
     t.string "vehicle_color"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "password_digest"
+    t.string "cep"
+    t.boolean "is_online"
   end
 
   create_table "orders", force: :cascade do |t|
@@ -58,6 +73,9 @@ ActiveRecord::Schema.define(version: 2020_10_29_142608) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "state"
+    t.string "destination_city"
+    t.string "destination_state"
+    t.string "destination_neighborhood"
     t.index ["company_id"], name: "index_orders_on_company_id"
     t.index ["deliveryman_id"], name: "index_orders_on_deliveryman_id"
   end
@@ -83,11 +101,13 @@ ActiveRecord::Schema.define(version: 2020_10_29_142608) do
     t.string "email_hash"
     t.bigint "company_id"
     t.string "role"
+    t.boolean "is_online"
     t.index ["company_id"], name: "index_users_on_company_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "addresses", "profiles"
   add_foreign_key "orders", "companies"
   add_foreign_key "orders", "deliverymen"
   add_foreign_key "profiles", "users"

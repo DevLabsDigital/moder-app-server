@@ -6,6 +6,7 @@
 #  email                  :string           default(""), not null
 #  email_hash             :string
 #  encrypted_password     :string           default(""), not null
+#  is_online              :boolean
 #  remember_created_at    :datetime
 #  reset_password_sent_at :datetime
 #  reset_password_token   :string
@@ -29,8 +30,8 @@ class User < ApplicationRecord
   include Rails.application.routes.url_helpers
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  enum role: { company: 'company', admin: 'admin' }
-
+  enum role: { company: 'company', admin: 'admin', deliveryman: 'deliveryman' }
+  
   belongs_to :company
 
   devise :database_authenticatable, :registerable,
@@ -46,8 +47,6 @@ class User < ApplicationRecord
   after_initialize :setup_profile
 
   after_create :send_mail_to_finalize_register
-
-  
 
   
 

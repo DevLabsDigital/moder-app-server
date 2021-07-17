@@ -9,4 +9,6 @@ class ApplicationController < ActionController::Base
 			"signin"
 		end
 	end
+
+	
 end

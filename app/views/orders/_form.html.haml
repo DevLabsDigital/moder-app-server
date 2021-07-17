@@ -9,7 +9,10 @@
         .form-inputs
           = f.input :destination_accountable
           = f.input :destination_address
+          = f.input :destination_city, input_html: {value: current_user.company.city}
+          = f.input :destination_neighborhood
           = f.input :destination_phone
+          = f.input :destination_state, input_html: {value: current_user.company.state}
           = f.input :note
           -if current_user.admin?
             = f.association :company
