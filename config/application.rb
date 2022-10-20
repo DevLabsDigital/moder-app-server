@@ -13,12 +13,20 @@ module Agrega
     config.active_record.belongs_to_required_by_default = false
     
     config.time_zone = 'Brasilia'
-	config.i18n.default_locale = "pt-BR"
+	  config.i18n.default_locale = "pt-BR"
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
     
+    config.autoload_paths << Rails.root.join('lib')
+
+    Rails.application.config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins '*'
+        resource '*', headers: :any, methods: [:get, :post, :patch, :put]
+      end
+    end
   end
 end

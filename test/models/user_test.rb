@@ -6,6 +6,7 @@
 #  email                  :string           default(""), not null
 #  email_hash             :string
 #  encrypted_password     :string           default(""), not null
+#  is_online              :boolean
 #  remember_created_at    :datetime
 #  reset_password_sent_at :datetime
 #  reset_password_token   :string

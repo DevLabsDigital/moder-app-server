@@ -5,6 +5,7 @@ class OrdersController < ApplicationController
   # GET /orders
   # GET /orders.json
   def index
+    
     if current_user.company?
       @orders = current_user.company.orders
     elsif current_user.admin?
@@ -80,6 +81,6 @@ class OrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params.require(:order).permit(:destination_accountable, :destination_address, :destination_phone, :note, :company_id, :deliveryman_id, :state)
+      params.require(:order).permit(:destination_accountable, :destination_address, :destination_city, :destination_neighborhood, :destination_state, :destination_phone, :note, :company_id, :deliveryman_id, :state)
     end
 end

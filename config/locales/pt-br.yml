@@ -15,7 +15,8 @@ pt-BR:
   canceled: CANCELADO
   on_way: A CAMINHO
   pending: PENDENTE
-
+  picking_up: RETIRANDO O PEDIDO
+  back_to_company: RETORNANDO AO REMETENTE
   activerecord:
     models:
       company: Empresa
@@ -29,6 +30,9 @@ pt-BR:
         destination_accountable: Responsável por receber
         destination_address: Endereço de entrega
         destination_phone: Telefone do destinatário
+        destination_city: Cidade de entrega
+        destination_neighborhood: Bairro de entrega
+        destination_state: Estado de entrega
         note: Observações
         state: Estado
         company: Empresa
@@ -118,6 +122,7 @@ pt-BR:
       default: "%d/%m/%Y"
       long: "%d de %B de %Y"
       short: "%d de %B"
+      day_name: "%A, %d de %B"
     month_names:
     - 
     - janeiro

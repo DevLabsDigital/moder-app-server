@@ -28,8 +28,11 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 gem 'redis-rails'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt'
+gem 'jwt'
+gem 'simple_command'
 
+gem 'rack-cors', :require => 'rack/cors'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
@@ -96,3 +99,5 @@ gem 'activerecord-import'
 gem 'bullet', group: 'development'
 gem 'si'
 gem 'mimemagic', github: 'mimemagicrb/mimemagic', ref: '01f92d86d15d85cfd0f20dabd025dcbd36a8a60f'
+gem 'jsonapi-serializer'
+gem 'onesignal-ruby'
