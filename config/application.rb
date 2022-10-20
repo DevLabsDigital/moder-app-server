@@ -21,6 +21,8 @@ module Agrega
     # the framework and any gems in your application.
     
     config.autoload_paths << Rails.root.join('lib')
+    config.eager_load_paths << Rails.root.join('lib')
+
 
     Rails.application.config.middleware.insert_before 0, Rack::Cors do
       allow do
